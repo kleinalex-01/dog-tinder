@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header styling */
+.header-container {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Profile/Chat icons */
+.header-container img {
+  height: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Center paw */
+.paw-container {
+  height: 2rem;
+  width: 4rem;
+  border-radius: 1rem;
+  background: linear-gradient(45deg, #FA695A, #F83375);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paw {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  object-fit: contain;
+}
+/* Main content */
+.content-container {
+  height: calc(100vh - 5rem);
+  background: linear-gradient(45deg, #FFFFFF, #F6F7FB);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+/* Footer buttons */
+/* btn */
+.hit-or-miss-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.hit-or-miss-btn {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #FFFFFF;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0.75rem rgba(122, 122, 122, 0.4);
+  transition: all 150ms ease;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hit-or-miss-btn:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.2rem 0.5rem rgba(132, 132, 132, 0.3);
+}
+.hit-or-miss-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: contain;
+}
+/* Card */
+.card-container {
+  height: calc(100vh - 10rem);
+  width: 95%;
+  background-color: red;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.username {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.userBio {
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
