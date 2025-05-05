@@ -66,6 +66,10 @@
   transform: translateY(-0.1rem);
   box-shadow: 0 0.2rem 0.5rem rgba(132, 132, 132, 0.3);
 }
+.hit-or-miss-btn:active {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem rgba(122, 122, 122, 0.6);
+}
 .hit-or-miss-icon {
   height: 1.5rem;
   width: 1.5rem;
@@ -75,7 +79,6 @@
 .card-container {
   height: calc(100vh - 10rem);
   width: 95%;
-  background-color: red;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
