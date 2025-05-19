@@ -77,13 +77,22 @@
 }
 /* Card */
 .card-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   height: calc(100vh - 10rem);
   width: 95%;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: end;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .card-overlay {
   background: linear-gradient(45deg, #000000c3, #00000000);
   height: 100%;
