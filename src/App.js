@@ -38,12 +38,14 @@ function App() {
     setDogPics(initialPics);
   })();}, []);
 
-  function handleDragEnd(event, info) {
+  async function handleDragEnd(event, info) {
     if (info.offset.x > 100 || info.offset.x < -100) {
-      swipePic()
-  } else {
-    controls.start({x:0})
-  }}
+      await controls.start({ x: window.innerWidth * 1.5 })
+       swipePic()
+       controls.start({ x: 0 })
+    }
+  }
+
 
 
   if (!dogPics) return <p>Loading...</p>
@@ -64,9 +66,12 @@ function App() {
               style={{
                 backgroundImage: `url(${pic})`,
                 zIndex: index,
-                transform: `translate(-50%, -50%) scale(${scale}) translateY(${yOffset}px)`,
+                y: yOffset,
+                rotate: isTop ? rotate : 0,
+                scale: scale,
+                x: isTop ? x : 0
               }}
-              animate={{ scale }}
+              animate={isTop ? controls : undefined}
               drag={isTop ? "x" : false}
               dragConstraints={{ left: 0, right: 0 }}
               whileTap={isTop ? { scale: 0.95 } : {}}
