@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react"
 import axios from "axios";
 import './App.css';
-import Header from './Components/Header';
-import Swipe from './Components/Swipe';
+import Swipe from "./Components/Swipe";
 function App() {
   const [dogPics, setDogPics] = useState([])
   const baseURL = "https://dog.ceo/api/breeds/image/random"
@@ -33,13 +32,9 @@ function App() {
     const initialPics = await Promise.all(Array.from({ length: 5 }, getPics));
     setDogPics(initialPics);
   })();}, []);
-
-  if (!dogPics) return <p>Loading...</p>
-
   return (
     <>
-      <Header />
-      <Swipe dogPics={dogPics} swipePic={swipePic}/>
+      <Swipe dogPics={dogPics} swipePic={swipePic} />
     </>
   )
 }

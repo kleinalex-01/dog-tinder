@@ -1,14 +1,15 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
 
 export default function Header() {
     return (
         <>
           <div className='header-container'>
-            <img src='/Images/profile.png' alt='profile icon' />
+            <NavLink to="/profile"><img src='/Images/profile.png' alt='profile icon' /></NavLink>
 
-            <div className="paw-container"><img src="../Images/paw.png" alt="paw" className="paw"/></div>
+            <div className="paw-container"><NavLink to="/"><img src="../Images/paw.png" alt="paw" className="paw"/></NavLink></div>
 
-            <img src='/Images/chat.png' alt='chat icon' />
+            <NavLink to="/chat"><img src='/Images/chat.png' alt='chat icon' /></NavLink>
           </div>
         </>
       )

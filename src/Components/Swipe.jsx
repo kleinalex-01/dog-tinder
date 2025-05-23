@@ -17,6 +17,8 @@ export default function Swipe( {dogPics, swipePic} ) {
             controls.start({ x: 0 })
         }
     }
+    
+    if (!dogPics) return <p>Loading...</p>
 
     return (
         <>
